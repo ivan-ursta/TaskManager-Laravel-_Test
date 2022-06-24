@@ -11,4 +11,7 @@ class TaskController extends Controller
     public function task(){
         return response()->json(TaskModel::get(), 200);
     }
+    public function taskById($id){
+        return response()->json(TaskModel::find($id),200);
+    }
 }

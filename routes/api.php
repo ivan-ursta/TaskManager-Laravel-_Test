@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('task', 'App\Http\Controllers\Task\TaskController@task');
 Route::get('users', 'App\Http\Controllers\Users\UsersController@users');
+Route::get('task/{id}', 'App\Http\Controllers\Task\TaskController@taskById');
+Route::get('users/{id}', 'App\Http\Controllers\Users\UsersController@usersById');
+
