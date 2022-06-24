@@ -10,12 +10,14 @@ class UsersModel extends Model
     use HasFactory;
     protected $table = "Users";
 
+    const UPDATED_AT = null;
+
     protected $fillable = [
         'Id',
         'Name',
         'Email',
         'Passwd',
         'Role',
-        'Created_on'
+        'created_at'
     ];
 }

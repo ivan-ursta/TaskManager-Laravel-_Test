@@ -14,4 +14,8 @@ class UsersController extends Controller
     public function usersById($id){
         return response()->json(UsersModel::find($id), 200);
     }
+    public function usersSave(Request $req){
+        $users = UsersModel::create($req->all());
+        return response()->json($users, 201);
+    }
 }

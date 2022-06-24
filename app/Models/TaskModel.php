@@ -16,7 +16,7 @@ class TaskModel extends Model
         'Description',
         'Exec_status',
         'User_id',
-        'Created_on',
-        'Update_on'
+        'created_at',
+        'updated_at'
     ];
 }
