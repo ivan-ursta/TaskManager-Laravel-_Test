@@ -21,10 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('task', 'App\Http\Controllers\Task\TaskController@task');
 Route::get('task/{id}', 'App\Http\Controllers\Task\TaskController@taskById');
 Route::post('task', 'App\Http\Controllers\Task\TaskController@taskSave');
+Route::put('task/{task}', 'App\Http\Controllers\Task\TaskController@taskEdit');
+Route::delete('task/{task}', 'App\Http\Controllers\Task\TaskController@taskDelete');
 
-Route::get('users', 'App\Http\Controllers\Users\UsersController@users');
-Route::get('users/{id}', 'App\Http\Controllers\Users\UsersController@usersById');
-Route::post('users', 'App\Http\Controllers\Users\UsersController@usersSave');
+Route::get('user', 'App\Http\Controllers\Users\UsersController@user');
+Route::get('user/{id}', 'App\Http\Controllers\Users\UsersController@userById');
+Route::post('user', 'App\Http\Controllers\Users\UsersController@userSave');
+Route::put('user/{user}', 'App\Http\Controllers\Users\UsersController@userEdit');
+Route::delete('user/{user}', 'App\Http\Controllers\Users\UsersController@userDelete');
 
 
 

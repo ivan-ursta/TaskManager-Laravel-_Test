@@ -18,4 +18,12 @@ class TaskController extends Controller
         $task = TaskModel::create($req->all());
         return response()->json($task, 201);
     }
+    public function taskEdit(Request $req, TaskModel $task){
+        $task->update($req->all());
+        return response()->json($task, 200);
+    }
+    public function taskDelete(Request $req, TaskModel $task){
+        $task->delete();
+        return response()->json('', 204);
+    }
 }
